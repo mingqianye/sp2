@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  rent: 9.99
+  longitude: 1.5
+  latitude: 1.5
+  bedrooms: 9.99
+  available_at: 2015-03-05
+
+two:
+  user_id: 
+  rent: 9.99
+  longitude: 1.5
+  latitude: 1.5
+  bedrooms: 9.99
+  available_at: 2015-03-05
