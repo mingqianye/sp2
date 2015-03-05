@@ -1,4 +1,5 @@
 ActiveAdmin.register House do
+  permit_params :rent, :longitude, :latitude, :bedrooms, :available_at
 
 
   # See permitted parameters documentation:
