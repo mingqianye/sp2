@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @house.user %>
+</p>
+
+<p>
+  <strong>Rent:</strong>
+  <%= @house.rent %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @house.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @house.latitude %>
+</p>
+
+<p>
+  <strong>Bedrooms:</strong>
+  <%= @house.bedrooms %>
+</p>
+
+<p>
+  <strong>Available at:</strong>
+  <%= @house.available_at %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
