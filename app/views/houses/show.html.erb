@@ -1,34 +1,32 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = House -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => House %></h1>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @house.user %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:rent) %></dt>
+      <dd><pre class="prettyprint"><%= @house.rent %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:longitude) %></dt>
+      <dd><pre class="prettyprint"><%= @house.longitude %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:latitude) %></dt>
+      <dd><pre class="prettyprint"><%= @house.latitude %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:bedrooms) %></dt>
+      <dd><pre class="prettyprint"><%= @house.bedrooms %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:available_at) %></dt>
+      <dd><pre class="prettyprint"><%= @house.available_at %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Rent:</strong>
-  <%= @house.rent %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              houses_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_house_path(@house), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              house_path(@house),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @house.longitude %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @house.latitude %>
-</p>
-
-<p>
-  <strong>Bedrooms:</strong>
-  <%= @house.bedrooms %>
-</p>
-
-<p>
-  <strong>Available at:</strong>
-  <%= @house.available_at %>
-</p>
-
-<%= link_to 'Edit', edit_house_path(@house) %> |
-<%= link_to 'Back', houses_path %>
